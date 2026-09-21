@@ -19,7 +19,15 @@ a{
     color: black;
     text-decoration: none;
 }
+.vuelta{
+    color:palevioletred
+}
+:hover.vuelta{
+    color: #ffbb00;
+    text-decoration: underline;
+}
 .hero{
+    background-color: #ffbb00;
     display: flex;
     height:90vh;
     font-family: "Poppins", sans-serif;
@@ -57,7 +65,7 @@ a{
     justify-content: center;
 }
 .formulario{
-    height: 70vh;
+    min-height: 70vh;
     width: 70vh;
     border-color: palevioletred;
     border-width: 1vh;
@@ -67,11 +75,81 @@ a{
     display: flex;
     flex-direction: column;
     padding: 2vh;
+    gap: 1vh;
+    justify-self: center;
 }
 footer{
-    height: 15vh;
+    padding: 2vh;
     background-color: darksalmon;
 }
 .descripcion{
     max-width: 50vh;
+    min-width: 50vh;
+    min-height: 10vh;
+    font-family: "Montserrat", sans-serif;
+}
+.campo-texto{
+    font-family: "Montserrat", sans-serif;
+    max-width: 30vh;
+}
+.carta{
+    display: flex;
+    justify-content: center;
+}
+.enviar{
+    font-family: "Poppins", sans-serif;
+    font-size: large;
+    height: 4vh;
+    width: 10vh;
+    background-color: palevioletred;
+    border-color: palevioletred;
+    color: white;
+    border-radius: 3vh;
+}
+.cerdibug{
+    height:90vh;
+}
+:hover.menu{
+    color: white;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;;
+}
+@media screen and (width <= 600px) {
+    header{
+        display: none;
+    }
+    .hero{
+        width: 100%;
+    }
+    .cerdibug{
+        width: 45vh;
+        height: 45vh;
+    }
+    .separador{
+        font-size: 4vh;
+    }
+    .tarjeta{
+        flex-direction: column;
+    }
+    .imgPerfil{
+        height: 40vh;
+        width: 40vh ;
+    }
+    .contenidoT{
+        font-size: large;
+    }
+
+    .formulario{
+        width: 50vh;
+    }
+    .descripcion{
+        max-width: 30vh;
+        min-width: 30vh;
+    }
+    .hero{
+        flex-direction: column;
+    }
 }

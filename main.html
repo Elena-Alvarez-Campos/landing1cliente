@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="query.js"></script>
 </head>
 <body>
 
@@ -22,7 +24,13 @@
     </header>
 
     <article>
-        <div class="hero">:)</div>
+        <div class="hero">
+            <div class="tituloPrincipal">
+                <h2>Maca Paca</h2>
+                <div>Fascinación por los pijamas</div>
+            </div>
+            <img src="img/cerdibug.png" class="cerdibug">
+        </div>
         <div class="separador">Conóceme mejor</div>
         <div class="tarjeta">
             <img src="img/macapaca.webp" class="imgPerfil">
@@ -37,19 +45,24 @@
             </div>
         </div>
         <div class="separador">¿Con dudas?</div>
-        <div class="formulario">
-            <h2>Pónte en contacto</h2>
-            <div>Dime cualquier pregunta que tengas. La respuesta será a trevés del correo, a si que tenlo en cuenta</div>
-            Nombre: <input type="text" class="campo-texto" placeholder="Escribe un nombre">
-            Apellidos: <input type="text" class="campo-texto" placeholder="Escribe los pellidos">
-            Teléfono: <input type="text" class="campo-texto" placeholder="Escribe un teléfono">
-            Correo: <input type="text" class="campo-texto" placeholder="Escribe un correo ">
-            
-            Tema:<textarea name="text" class="descripcion" placeholder="Escribe el motivo de la solicitud" rows="4"></textarea>
-            <button class="enviar">Enviar</button>
+        <div class="carta">
+            <div class="formulario">
+                <h2>Pónte en contacto</h2>
+                <div>Dime cualquier pregunta que tengas. La respuesta será a trevés del correo, a si que tenlo en cuenta</div>
+                <form method="post">
+                Nombre: <input type="text"  class="campo-texto" id="nombre" placeholder="Escribe un nombre">
+                Apellidos: <input type="text" class="campo-texto" placeholder="Escribe los pellidos">
+                Teléfono: <input type="text" class="campo-texto" placeholder="Escribe un teléfono">
+                Correo: <input type="text" class="campo-texto" placeholder="Escribe un correo ">
+                Tema:<textarea name="text" class="descripcion" placeholder="Escribe el motivo de la solicitud" rows="4"></textarea>
+                </form>
+                <a href="submain.html"><button type="submit" class="enviar" >Enviar</button></a>
+            </div>
         </div>
     </article>
 
-    <footer></footer>
+    <footer>
+        <div>Los sueños están hechos de algodón ~Maca Paca</div>
+    </footer>
 </body>
 </html>
