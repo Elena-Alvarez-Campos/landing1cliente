@@ -57,5 +57,21 @@ a{
     justify-content: center;
 }
 .formulario{
-    height: 90vh;
+    height: 70vh;
+    width: 70vh;
+    border-color: palevioletred;
+    border-width: 1vh;
+    border-style: solid;
+    margin: 3vh 20vh;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+}
+footer{
+    height: 15vh;
+    background-color: darksalmon;
+}
+.descripcion{
+    max-width: 50vh;
 }
