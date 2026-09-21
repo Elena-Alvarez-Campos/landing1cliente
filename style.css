@@ -1,0 +1,61 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+header{
+    display: flex;
+    background-color:darksalmon;
+    height: 3vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap:2vh;
+    font-family: "Montserrat", sans-serif;
+    padding: 1vh;
+    padding-right: 3vh;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.hero{
+    display: flex;
+    height:90vh;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size:xx-large;
+    font-weight: bold;
+    align-items:center;
+    justify-content: center;
+}
+.tarjeta{
+    font-size: larger;
+    display: flex;
+    height: 90vh;
+    background-color: palevioletred;
+    color:whitesmoke;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.imgPerfil{
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50px;
+}
+.separador{
+    display: flex;
+    height: 10vh;
+    background-color: palevioletred;
+    color:whitesmoke;
+    font-size:6vh;
+    font-weight: bold;
+    align-items:center;
+    justify-content: center;
+}
+.formulario{
+    height: 90vh;
+}
