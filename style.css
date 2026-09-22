@@ -64,6 +64,11 @@ a{
     align-items:center;
     justify-content: center;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;;
+}
 .formulario{
     min-height: 70vh;
     width: 70vh;
@@ -77,6 +82,11 @@ a{
     padding: 2vh;
     gap: 1vh;
     justify-self: center;
+    align-items: center;
+}
+.cubrir{
+    display: flex;
+    flex-direction: row;
 }
 footer{
     padding: 2vh;
@@ -111,11 +121,6 @@ footer{
 }
 :hover.menu{
     color: white;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;;
 }
 @media screen and (width <= 600px) {
     header{
