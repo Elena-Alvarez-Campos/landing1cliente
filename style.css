@@ -68,10 +68,11 @@ form{
     display: flex;
     flex-direction: column;
     gap: 1vh;;
+    text-align: left;
 }
 .formulario{
     min-height: 70vh;
-    width: 70vh;
+    max-width: 60vh;
     border-color: palevioletred;
     border-width: 1vh;
     border-style: solid;
@@ -83,10 +84,24 @@ form{
     gap: 1vh;
     justify-self: center;
     align-items: center;
+    text-align: center;
 }
 .cubrir{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 0 7vh;
+    text-align: center;
+}
+input{
+    border-color: palevioletred;
+    border-style: solid;
+    border-radius: 2vh;
+}
+textarea{
+    border-color: palevioletred;
+    border-style: solid;
+    border-radius: 2vh;
 }
 footer{
     padding: 2vh;
@@ -101,6 +116,7 @@ footer{
 .campo-texto{
     font-family: "Montserrat", sans-serif;
     max-width: 30vh;
+    
 }
 .carta{
     display: flex;
@@ -108,7 +124,8 @@ footer{
 }
 .enviar{
     font-family: "Poppins", sans-serif;
-    font-size: large;
+    font-size:medium;
+    font-weight:500;
     height: 4vh;
     width: 10vh;
     background-color: palevioletred;
@@ -116,12 +133,20 @@ footer{
     color: white;
     border-radius: 3vh;
 }
+:hover.enviar{
+    background-color: white;
+    color: palevioletred
+}
 .cerdibug{
     height:90vh;
 }
 :hover.menu{
     color: white;
 }
+.contenidoT{
+        font-size: larger;
+
+    }
 @media screen and (width <= 600px) {
     header{
         display: none;
@@ -146,15 +171,21 @@ footer{
     .contenidoT{
         font-size: large;
     }
-
+    input{
+        text-align: left;
+    }
     .formulario{
         width: 50vh;
+        
     }
     .descripcion{
         max-width: 30vh;
         min-width: 30vh;
     }
     .hero{
+        flex-direction: column;
+    }
+    .cubrir{
         flex-direction: column;
     }
 }

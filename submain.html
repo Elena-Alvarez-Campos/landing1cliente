@@ -6,13 +6,16 @@
     <title>Page Title</title>
     <link rel='stylesheet' href='style.css'>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
     <script src="query.js"></script>
 </head>
 <body>
+    <header></header>
     <p>Hola:)</p>
-    <a href="main.html" class="vuelta">Vuelve cuendo quieras</a>
+    <a href="main.html" class="vuelta">Vuelve cuando quieras</a>
     <div class="informacion">
-                <div>Nombre: Maca</div>
+                <div>Nombre: <request.getParameter("#nombre")></div>
                 <div>Apellidos: Paca Paca</div>
                 <div>Especialidad: Conocimiento téxtil</div>
                 <div>Correo: macapacareal@gmail.com</div>

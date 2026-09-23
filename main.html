@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
     <script src="query.js"></script>
 </head>
 <body>
@@ -41,22 +43,24 @@
                 <div>Correo: macapacareal@gmail.com</div>
                 <div>Experiencia: Recién salida de la fábrica</div>
                 <div>Estudios: Grado en ropa para peluches</div>
-            
+                <div>Sueños: Hacer feliz a los demás con mi ropa</div>
             </div>
         </div>
         <div class="separador">¿Con dudas?</div>
         <div class="carta">
             <div class="formulario">
                 <h2>Pónte en contacto</h2>
-                <div>Dime cualquier pregunta que tengas. La respuesta será a trevés del correo, a si que tenlo en cuenta</div>
+                <div>Dime cualquier pregunta que tengas. La respuesta será a trevés del correo, a si que tenlo en cuenta.
+                    No voy a contestar a mensajes fraudulentos o mal intencionados.
+                </div>
                 <form method="post">
-                <div class="cubrir">Nombre: <input type="text"  class="campo-texto" id="nombre" placeholder="Escribe un nombre"></div>
-                Apellidos: <input type="text" class="campo-texto" placeholder="Escribe los pellidos">
-                Teléfono: <input type="text" class="campo-texto" placeholder="Escribe un teléfono">
-                Correo: <input type="text" class="campo-texto" placeholder="Escribe un correo ">
-                Tema:<textarea name="text" class="descripcion" placeholder="Escribe el motivo de la solicitud" rows="4"></textarea>
+                    <div class="cubrir">Nombre: <input type="text" id="nombre"  class="campo-texto" id="nombre" placeholder="Escribe un nombre"></div>
+                    <div class="cubrir">Apellidos: <input type="text" class="campo-texto" placeholder="Escribe los apellidos"></div>
+                    <div class="cubrir">Teléfono: <input type="text" class="campo-texto" placeholder="Escribe un teléfono"></div>
+                    <div class="cubrir">Correo: <input type="text" class="campo-texto" placeholder="Escribe un correo "></div>
+                    ¿Que quieres comentar?<textarea name="text" class="descripcion" placeholder="Escribe el motivo de la solicitud" rows="4"></textarea>
                 </form>
-                <a href="submain.html"><button type="submit" class="enviar" >Enviar</button></a>
+                <button type="submit" class="enviar" >Enviar</button>
             </div>
         </div>
     </article>
