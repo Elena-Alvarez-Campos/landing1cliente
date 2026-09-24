@@ -7,12 +7,15 @@ $(document).ready(function () {
         $("informacion").append(nombretxt)
         $()
     })*/
+   
+    
     $("form").submit(function(){
     alert("Subido");
   });
   $(".enviar").click(function(){
     $("form").submit();
     window.location.replace("submain.html");
+    console.log("Hola")
     
   });
   $("p").each(function(i){
