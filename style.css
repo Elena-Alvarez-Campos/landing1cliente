@@ -147,6 +147,27 @@ footer{
         font-size: larger;
 
     }
+.emergencia{
+    color:red;
+    display:none
+}
+.invalido{
+    color:red;
+    display:none
+
+}
+.emailmal{
+    color: red;
+    display: none;
+}
+.informacion{
+    margin-left:5vh ;
+    display: flex;
+    flex-direction: column;
+    background-color:palevioletred;
+    height: 40vh;
+    max-width: 60vh;
+}
 @media screen and (width <= 600px) {
     header{
         display: none;
