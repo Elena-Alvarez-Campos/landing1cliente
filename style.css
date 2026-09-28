@@ -37,6 +37,9 @@ a{
     align-items:center;
     justify-content: center;
 }
+#slide_nav{
+    display:none;
+}
 .tarjeta{
     font-size: larger;
     display: flex;
@@ -50,6 +53,7 @@ a{
     padding-right: 20%;
 }
 .imgPerfil{
+    aspect-ratio: 1;
     height: 50vh;
     width: 50vh;
     border-radius: 50px;
@@ -68,7 +72,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 1vh;;
-    text-align: left;
+    text-align: center;
 }
 .formulario{
     min-height: 70vh;
@@ -88,15 +92,17 @@ form{
 }
 .cubrir{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     padding: 0 7vh;
     text-align: center;
+    align-items: center;
 }
 input{
     border-color: palevioletred;
     border-style: solid;
     border-radius: 2vh;
+    font-size:medium;
 }
 textarea{
     border-color: palevioletred;
@@ -169,8 +175,28 @@ footer{
     max-width: 60vh;
 }
 @media screen and (width <= 600px) {
+    #slide_nav{
+        display: block;
+        display: flex;
+        background-color:transparent;
+        width: 5vh;
+        height: 5vh;
+        align-items: center;
+        justify-content: center;
+        font-size: x-large;
+        position: fixed;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        margin: 1vh;
+    }
     header{
-        display: none;
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+
     }
     .hero{
         width: 100%;
@@ -194,19 +220,27 @@ footer{
     }
     input{
         text-align: left;
+        font-size: small;
     }
     .formulario{
         width: 50vh;
-        
+        text-align:left;
+        margin: 3vh 6vh;
     }
     .descripcion{
         max-width: 30vh;
         min-width: 30vh;
+        align-self: center;
     }
     .hero{
         flex-direction: column;
     }
     .cubrir{
-        flex-direction: column;
+        justify-content: space-between;
+        flex-direction: row;
+        padding:0%;
+    }
+    form{
+        padding-top: 1vh;
     }
 }
