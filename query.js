@@ -49,6 +49,10 @@ $(document).ready(function () {
     }
     
   });
+  $("#slide_nav_button").click(function () {
+    //$("header").toggleClass("visible")
+    $("header").toggleClass("activo")
+  })
 })
 
 

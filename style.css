@@ -174,9 +174,15 @@ footer{
     height: 40vh;
     max-width: 60vh;
 }
+.visible{
+    display: none;
+}
+:hover.menu{
+    color: white;
+}
 @media screen and (width <= 600px) {
+
     #slide_nav{
-        display: block;
         display: flex;
         background-color:transparent;
         width: 5vh;
@@ -189,14 +195,24 @@ footer{
         top: 0;
         cursor: pointer;
         margin: 1vh;
+        z-index: 1;
     }
     header{
-        display: block;
+        display: flex;
         position: fixed;
         right: 0;
-        top: 0;
         flex-direction: column;
-
+        height: 25vh;
+        border-bottom-left-radius: 2vh;
+        padding-bottom: 2vh;
+        text-align: left;
+        align-items: baseline;
+        padding-left: 2vh;
+        transform: translate3d(100%, -100%, 0px);
+        transition: transform .35s ease-in-out;
+    }
+    header.activo{
+        transform: translate3d(0,0,0);
     }
     .hero{
         width: 100%;
