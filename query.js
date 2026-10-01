@@ -14,7 +14,7 @@ $(document).ready(function () {
   
   
   $(".enviar").click(function(){
-    if($("#nombre").val().length >0 && $("#apellido").val().length >0 && $("#correo").val().length >0 && $("#telefono").val().length >0 && $("#tema").val().length >0){
+    if($("#nombre").val().trim().length >0 && $("#apellido").val().trim().length >0 && $("#correo").val().trim().length >0 && $("#telefono").val().trim().length >0 && $("#tema").val().trim().length >0){
       $(".emergencia").css("display", "none")
       $(".emailmal").css("display", "none")
       let telefonoform=$("#telefono").val();
@@ -51,6 +51,11 @@ $(document).ready(function () {
   });
   $("#slide_nav_button").click(function () {
     //$("header").toggleClass("visible")
+    if($("#slide_nav_button").text()=="☰"){
+      $("#slide_nav_button").text("✕")
+    }else{
+      $("#slide_nav_button").text("☰")
+    }
     $("header").toggleClass("activo")
   })
 })

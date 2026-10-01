@@ -2,11 +2,12 @@ body{
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
+    /* background-color: lightpink; */
 }
 header{
     display: flex;
     background-color:darksalmon;
-    height: 3vh;
+    height: 5vh;
     flex-direction: row;
     align-items: center;
     justify-content: end;
@@ -14,6 +15,7 @@ header{
     font-family: "Montserrat", sans-serif;
     padding: 1vh;
     padding-right: 3vh;
+    font-weight: bold;
 }
 a{
     color: black;
@@ -170,9 +172,33 @@ footer{
     margin-left:5vh ;
     display: flex;
     flex-direction: column;
-    background-color:palevioletred;
-    height: 40vh;
-    max-width: 60vh;
+    height: 70vh;
+    width:70vh;
+    background-image: url("img/manzanatamagovhi.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    align-items: center;
+    justify-content: center;
+
+}
+.inManzana{
+    width: 30vh;
+    
+}
+.infoManzana{
+    width: 100vh;
+    background-color: antiquewhite;
+    padding: 5vh;
+    border-color: rgb(134, 78, 31);
+    border-style: solid;
+    border-width: 1vh;
+    border-radius: 3vh;
+    right: 0;
+    top: 0;
+    justify-content: center;
+}
+.b2{
+    background-color: lightgreen;
 }
 .visible{
     display: none;
@@ -181,7 +207,13 @@ footer{
     color: white;
 }
 @media screen and (width <= 600px) {
-
+    .informacion{
+        width: 100%;
+    }
+    .infoManzana{
+        width: fit-content;
+        margin: 2vh;
+    }
     #slide_nav{
         display: flex;
         background-color:transparent;
