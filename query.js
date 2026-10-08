@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  
+  /*
   
   let nombreformfin=JSON.parse(localStorage.getItem("nombre"))
   let apellidoformfin=JSON.parse(localStorage.getItem("apellido"))
@@ -11,8 +11,8 @@ $(document).ready(function () {
   $("#correofin").text(correoformfin);
   $("#telefonofin").text(telefonoformfin)
   $("#temafin").text(temaformfin)
-  
-  
+  */
+  /*
   $(".enviar").click(function(){
     if($("#nombre").val().trim().length >0 && $("#apellido").val().trim().length >0 && $("#correo").val().trim().length >0 && $("#telefono").val().trim().length >0 && $("#tema").val().trim().length >0){
       $(".emergencia").css("display", "none")
@@ -49,6 +49,7 @@ $(document).ready(function () {
     }
     
   });
+  */
   $("#slide_nav_button").click(function () {
     //$("header").toggleClass("visible")
     if($("#slide_nav_button").text()=="☰"){
@@ -63,3 +64,6 @@ $(document).ready(function () {
 
 //documentación
 //https://dosideas.com/noticias/java/239-iajaxificando-un-formulario
+//https://coddy.tech/docs/es/php/forms
+//usar bd mongoDB
+//mongo atlas^ (crear colecciones en la nube)

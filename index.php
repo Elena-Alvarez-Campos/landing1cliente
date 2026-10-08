@@ -55,13 +55,13 @@
                 <div>Dime cualquier pregunta que tengas. La respuesta será a trevés del correo, a si que tenlo en cuenta.
                     No voy a contestar a mensajes fraudulentos o mal intencionados.
                 </div>
-                <form method="post" action="submain.html">
-                    <div class="cubrir">Nombre: <input type="text" id="nombre"  class="campo-texto" placeholder="Escribe un nombre" maxlength="15"></div>
-                    <div class="cubrir">Apellidos: <input type="text" id="apellido" class="campo-texto" placeholder="Escribe los apellidos" maxlength="30"></div>
-                    <div class="cubrir">Teléfono: <input type="text" id="telefono" class="campo-texto" placeholder="Escribe un teléfono" maxlength="9"></div>
-                    <div class="cubrir">Correo: <input type="email" id="correo" class="campo-texto" placeholder="Escribe un correo" maxlength="50"></div>
+                <form method="GET" action="procesar">
+                    <div class="cubrir">Nombre: <input type="text" name="nombretxt" id="nombre"  class="campo-texto" placeholder="Escribe un nombre" maxlength="15"></div>
+                    <div class="cubrir">Apellidos: <input type="text" name="apellidostxt" id="apellido" class="campo-texto" placeholder="Escribe los apellidos" maxlength="30"></div>
+                    <div class="cubrir">Teléfono: <input type="text" name="tlfnnum" id="telefono" class="campo-texto" placeholder="Escribe un teléfono" maxlength="9"></div>
+                    <div class="cubrir">Correo: <input type="email" name="correoemail" id="correo" class="campo-texto" placeholder="Escribe un correo" maxlength="50"></div>
                     ¿Que quieres comentar?
-                    <textarea name="text" id="tema" class="descripcion" placeholder="Escribe el motivo de la solicitud" rows="4" maxlength="250"></textarea>
+                    <textarea name="text" name="decripciontxt" id="tema" class="descripcion" placeholder="Escribe el motivo de la solicitud" rows="4" maxlength="250"></textarea>
                 </form>
                 <div class="emergencia">¡¡Tienes que rellenar todos los apartados!!</div>
                 <div class="invalido">¡¡El número de teléfono es inválido!!</div>
