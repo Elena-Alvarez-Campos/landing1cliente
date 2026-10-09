@@ -1,5 +1,5 @@
 <?php
-
+	
     // Arrays para guardar mensajes y errores:
 	$aErrores = array();
 	$aMensajes = array();
@@ -19,7 +19,7 @@
 		echo "<hr/>";
 
 		// Comprobar si llegaron los campos requeridos:
-		if( isset($_POST['nombretxt']) /*&& isset($_POST['apellidostxt'])*/ )
+		if( isset($_POST['nombretxt']) /*&& isset($_POST['apellidostxt'])*/)
 		{
 			
 			// Nombre:
@@ -33,18 +33,51 @@
 				else
 					$aErrores[] = "El nombre sólo puede contener letras y espacios";
 			}
+			// Apellidos:
+			if( empty($_POST['apellidostxt']) )
+				$aErrores[] = "Debe especificar los apellidos";
+			else
+			{
+				// Comprobar mediante una expresión regular, que sólo contienen letras y espacios:
+				if( preg_match($patron_texto, $_POST['apellidostxt']) )
+					$aMensajes[] = "Apellidos: [".$_POST['apellidostxt']."]";
+				else
+					$aErrores[] = "Los apellidos sólo pueden contener letras y espacios";
+			}
+			//Teléfono
+			
+			if( empty($_POST['tlfnnum']) )
+				$aErrores[] = "Debe especificar el teléfono";
+			else
+			{
+				if (is_numeric($_POST['tlfnnum'])) {
+    		    //echo var_export($_POST['tlfnnum'], true) . " es numérico", PHP_EOL;
+    			else {
+    	    		$aErrores[] ="El número de";
+    			}		
+			}
+			//Correo
+			if( empty($_POST['correoemail']) )
+				$aErrores[] = "Debe especificar el correo";
+			else
+			{
+				if (filter_var($_POST['correoemail'], FILTER_VALIDATE_EMAIL)) {
+    				//echo "La dirección de email [".$_POST['correoemail']."] es válida.\n";
+					} else {
+    					$aErrores[] = "La dirección de email no [".$_POST['correoemail']."] es válida.\n";
+					}
+			}
+			//Tema
 
+			
 		}
 		else
 		{
 			echo "<p>No se han especificado todos los datos requeridos.</p>";
-		}
-
-
-		// Si han habido errores se muestran, sino se mostrán los mensajes
-		if( count($aErrores) > 0 )
-		{
-			echo "<p>ERRORES ENCONTRADOS:</p>";
+			// Si han habido errores se muestran, sino se mostrán los mensajes
+			if( count($aErrores) > 0 )
+			{
+				echo "<p>ERRORES ENCONTRADOS:</p>";
 
 			// Mostrar los errores:
 			for( $contador=0; $contador < count($aErrores); $contador++ ) 
@@ -56,6 +89,8 @@
 			for( $contador=0; $contador < count($aMensajes); $contador++ ) 
 				echo $aMensajes[$contador]."<br/>";
 		}
+		}
+
 
 	}
 	else
@@ -70,5 +105,5 @@
 	// if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	// $emailErr = "Formato de email invalido";
 	// }
-
+	
 ?>
