@@ -19,7 +19,7 @@
 		echo "<hr/>";
 
 		// Comprobar si llegaron los campos requeridos:
-		if( isset($_POST['nombretxt']) && isset($_POST['txtApellidos']) )
+		if( isset($_POST['nombretxt']) /*&& isset($_POST['apellidostxt'])*/ )
 		{
 			
 			// Nombre:
@@ -28,8 +28,8 @@
 			else
 			{
 				// Comprobar mediante una expresión regular, que sólo contiene letras y espacios:
-				if( preg_match($patron_texto, $_POST['txtNombre']) )
-					$aMensajes[] = "Nombre: [".$_POST['txtNombre']."]";
+				if( preg_match($patron_texto, $_POST['nombretxt']) )
+					$aMensajes[] = "Nombre: [".$_POST['nombretxt']."]";
 				else
 					$aErrores[] = "El nombre sólo puede contener letras y espacios";
 			}
@@ -63,6 +63,12 @@
 		echo "<p>No se ha enviado el formulario.</p>";
 	}
 
-	echo "<p><a href='03_form3.html'>Haz click aquí para volver al formulario</a></p>";
+	echo "<p><a href='index.php'>Haz click aquí para volver al formulario</a></p>";
+	// ///////////////////////////////////////////////
+	// $email = validar_input($_POST["email"]);
+	// // Verifica el correcto formato de email
+	// if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	// $emailErr = "Formato de email invalido";
+	// }
 
 ?>
